@@ -1,0 +1,22 @@
+{
+    "MyTasks": "My tasks",
+    "Today": "Today, {{date}} June",
+    "TaskDescription": "Enter your task",
+    "Create": "Create",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "SignOut": "Sign Out",
+    "Landing1": "Stay Organized with",
+    "Landing2": "Our To-Do App",
+    "LandingMain": "Our app helps you manage your tasks efficiently and effortlessly. Enjoy features like responsive design, seamless mobile access, and intuitive user interfaces. Stay on top of your to-do list with user-friendly tools tailored to keep you productive and organized.",
+    "DownloadOnThe": "Download on the",
+    "RatedBestOver": "Rated Best Over",
+    "Reviews": "Reviews",
+    "StartWeb": "Continue in browser",
+    "Tags": "Tags",
+    "CreateNewTag": "Create New Tag",
+    "AddTag": "Add Tag",
+    "Name": "Name",
+    "Color": "Color",
+    "AddTags": "Add tags"
+}

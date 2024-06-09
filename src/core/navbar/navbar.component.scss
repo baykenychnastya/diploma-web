@@ -1,0 +1,7 @@
+.active {
+    @apply text-blue-700;
+
+    svg {
+        @apply text-blue-600;
+    }
+}
