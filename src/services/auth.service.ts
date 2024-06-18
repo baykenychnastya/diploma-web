@@ -37,16 +37,33 @@ export class AuthService {
     }
 
     getToken() {
-        return this.token;
+        return this.getSessionCookie();
     }
 
+    getCookie(name: string): string | null {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+    
+      getSessionCookie(): string | null {
+        return this.getCookie('__session');
+      }
+
     private startRefreshToken() {
-        setInterval(() => this.setToken(this.clerk), 2 * 60 * 1000);
+        setInterval(async () => await this.setToken(this.clerk), 2 * 60 * 1000);
     }
 
     private async setToken(clerk: Clerk) {
+        console.log("setting new tiken");
         if (clerk.session) {
             this.token = await clerk.session.getToken();
+            console.log("new token is set", this.token);
         }
     }
 }
